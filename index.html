@@ -1,0 +1,69 @@
+<style>
+  html{background-color:white}
+  table,input,textarea{width:99%}
+  table{position:relative}
+  textarea{height:9em}
+  td{width:30%}
+</style>
+<table>
+  <tr><td style="height:2em"></td></tr>
+  <tr><td>File #</td><td><input type="tel"></td></tr>
+  <tr>
+    <td>Email</td><td colspan=2><input type="email"></td>
+  </tr>
+  <tr>
+    <td>Address</td><td colspan=2><input></td>
+  </tr>
+  <tr>
+    <td>VIN</td><td colspan=2><input></td>
+  </tr>
+  <tr>
+    <td>Trim</td>
+    <td>Odo</td>
+    <td>Tire Depth (32nds)</td>
+  </tr>
+  <tr>
+    <td><input></td>
+    <td><input type="number"></td>
+    <td><input type="number"></td>
+  </tr>
+  <tr>
+    <td>License</td><td>Exp</td><td>State</td>
+  </tr>
+  <tr>
+    <td><input></td>
+    <td><input type="month"></td>
+    <td><input></td>
+  </tr>
+  <tr>
+    <td>Damage</td>
+  </tr>
+  <tr>
+    <td colspan=3><textarea></textarea></td>
+  </tr>
+  <tr>
+    <td>UPD</td>
+  </tr>
+  <tr>
+    <td colspan=3><textarea></textarea></td>
+  </tr>
+</table>
+<script>
+var d=document;
+var fs=d.documentElement;
+fs.onclick=()=>{
+  if (fs.requestFullscreen) {
+    fs.requestFullscreen();
+  }else if(fs.webkitRequestFullscreen) {
+    fs.webkitRequestFullscreen();
+  }
+};
+c=(e)=>d.createElement(e);
+(function(){
+  var table=d.getElementsByTagName('table')[0];
+  var tr=c('tr');
+  var td=c('td');
+  td.style.height='25em';
+  table.appendChild(tr).appendChild(td);
+})();
+</script>
